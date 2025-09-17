@@ -1,0 +1,112 @@
+.map-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  background: #f5f5f5;
+  border-right: 2px solid #ddd;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.sidebar.open {
+  width: 260px;
+}
+
+.sidebar.closed {
+  width: 40px;
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.sidebar-content h4 {
+  color: #b71c1c;
+  margin-bottom: 15px;
+}
+
+.sidebar-content label {
+  display: block;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.sidebar-content select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+}
+
+/* Botón para abrir/cerrar */
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  width: 28px;
+  height: 28px;
+  background: #b71c1c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.map-container {
+  flex: 1;
+}
+/* Modal de ficha completa */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  text-align: center;
+}
+.detalle-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.detalle-tabla td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.detalle-tabla td:first-child {
+  background: #f9f9f9;
+  font-weight: bold;
+  width: 200px;
+}
+
+.modal-content h4 {
+  margin-top: 20px;
+  color: #b71c1c;
+}
+
+.leaflet-top.leaflet-left {
+  top: 120px !important; /* bajar controles de zoom */
+}
+
+.leaflet-top.leaflet-right {
+  top: 120px !important; /* bajar control de capas */
+}
